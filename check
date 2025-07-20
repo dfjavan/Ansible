@@ -1,0 +1,2 @@
+ansible all --list   مشخص کردن تعدادهاست ها
+ansible all -m ping -k    تست ماژول پینگ روی هاست ها
