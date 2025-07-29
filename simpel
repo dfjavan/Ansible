@@ -1,6 +1,6 @@
 # ls in client
 ansible all -m command -a "ls -ln /root" 
 # mkdir
-ansible all -m file -a "path=/root/ansible state=directory"
+ansible all -m file -a "path=/root/ansible state=directory"     rm directory   ansible all -m file -a "path=/root/ansible state=absent"
 # mak file
 ansible all -m file -a "path=/tmp/ansible.txt state=touch"
