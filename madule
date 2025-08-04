@@ -10,3 +10,8 @@ ansible all -b -m copy -a "src=/home/fh/tt.txt dest=/root"
 # copy of clinet to master
 ansible 89.47.202.50 -b -m fetch -a "src=/root/vpn.sh dest=/home/fh"
 ___________________________________________________________
+#scan file
+ansible all -m stat -a "path:/etc/passwd"
+___________________________________________
+#reboot
+ansible IP -m reboot
