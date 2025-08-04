@@ -1,0 +1,12 @@
+# ls in client
+ansible all -m command -a "ls -ln /root" 
+# mkdir
+ansible all -m file -a "path=/root/ansible state=directory"     rm directory   ansible all -m file -a "path=/root/ansible state=absent"
+# mak file
+ansible all -m file -a "path=/tmp/ansible.txt state=touch"
+______________________________________________________________________________________
+# copy of master to client
+ansible all -b -m copy -a "src=/home/fh/tt.txt dest=/root"
+# copy of clinet to master
+ansible 89.47.202.50 -b -m fetch -a "src=/root/vpn.sh dest=/home/fh"
+___________________________________________________________
